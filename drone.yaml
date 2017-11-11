@@ -1,9 +1,12 @@
-workspace:
-  base: /go
-  path: src/github.com/dimanyen/HelloTestApp
+pipeline:  
+  build:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
 
-clone:
-	git:
-		image: plugins/git
-		depth: 50
-		tags: true
+matrix:  
+  GO_VERSION:
+    - 1.7
+    - 1.6
