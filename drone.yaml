@@ -1,4 +1,7 @@
-pipeline:
-  backend:
-    image: drone/drone:0.8
-    pull: true
+pipeline:  
+  build:
+    image: golang:golatest
+    commands:
+      - go get
+      - go build
+      - go test
