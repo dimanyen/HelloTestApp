@@ -1,4 +1,4 @@
 pipeline:
   backend:
-    image: golang:latest
+    image: drone/drone:0.8
     pull: true
